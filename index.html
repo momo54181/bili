@@ -1,137 +1,221 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <script> onpageshow  =  
-    function() {    
-      var ss  =  new Array("https://player.bilibili.com/player.html?aid=431257393&cid=854328289&page=1&as_wide=1&high_quality=1&danmaku=0&t=1", "https://player.bilibili.com/player.html?aid=345780098&cid=840124368&page=1&as_wide=1&high_quality=1&danmaku=0&t=1", "https://player.bilibili.com/player.html?aid=350422709&cid=840124368&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=489420444&cid=1225338686&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=693791944&cid=991340657&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=225632737&cid=225632737&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=824040782&cid=1068790439&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=372697798&cid=251735467&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=439320230&cid=439320230&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=354573511&cid=1084324727&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=268926258&cid=1064656363&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=819908404&cid=961504081&page=1&as_wide=1&high_quality=1&danmaku=0&t=1","https://player.bilibili.com/player.html?aid=956342234&cid=1206054952&page=1&as_wide=1&high_quality=1&danmaku=0&t=1");  
-      var num  =  parseInt(Math.random()  *  ss.length);
-      document.getElementById("videolink").src = ss[num];
-    }</script>
-    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    <script>LA.init({id:"KDo5KZeU67k4cmSe",ck:"KDo5KZeU67k4cmSe"})</script>
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>BiliMi~</title>
+    <title>BiliMi~ - 随机B站视频</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="BiliMi~ 随机播放B站视频，每次刷新都有新惊喜">
+    
+    <!-- 样式表 -->
     <link href="https://js-cdn.mocn.top/gh/momo54181/bili/bundles/main.vXZxP-zeFNcZJbnqU5xNE_-oaHZVKduO3-IPB-iECIpc.css" rel="stylesheet">
+    
+    <!-- 预加载脚本 -->
+    <link rel="preload" href="https://js-cdn.mocn.top/npm/jquery/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://js-cdn.mocn.top/gh/momo54181/bili/bundles/main.vraODx5hYf-DdzL9Ux5Z6Kmv9go-Dd1ofX_oEDjA4wRs.js" as="script">
+</head>
+
+<body>
+    <!-- 主内容区 -->
+    <div class="header">
+        <main class="cd-main-content">
+            <div class="container">
+                <div class="wrapper-content article">
+                    <div class="ibox">
+                        <div class="ibox-content animated fadeIn">
+                            <section class="article-content">
+                                <header class="page-header">
+                                    <div class="text-center">
+                                        <h1 class="padding-bot10">BiliMi~</h1>
+                                    </div>
+                                </header>
+                                
+                                <article class="article" id="article">
+                                    <p><span style="font-size:30px;">Hello World</span></p>
+                                    
+                                    <!-- 视频容器 -->
+                                    <div class="video-container">
+                                        <iframe id="videolink" src="" frameborder="no" scrolling="no" 
+                                                sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts" 
+                                                allowfullscreen></iframe>
+                                    </div>
+                                    
+                                    <h2>功能介绍</h2>
+                                    <p>随机Bili（刷新更换视频）</p>
+                                    
+                                    <div class="bilibili-link" onclick="window.open('https://space.bilibili.com/551991483','BiliBili','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')">
+                                        点我看莫莫的B站主页
+                                    </div>
+                                    
+                                    <p class="copyright-notice">视频来源于哔哩哔哩，版权纠纷与本站无关。</p>
+                                    
+                                    <h3>莫莫逗狗 © 版权所有</h3>
+                                    
+                                    <div class="website-link" onclick="window.open('https://www.mocn.top','_blank')">
+                                        莫莫逗狗
+                                    </div>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- 页脚按钮 -->
+    <button type="button" class="btn btn-info btn-sm canvas-close">莫莫逗狗 © 版权所有</button>
+    
+    <!-- 背景效果 -->
+    <script type="text/javascript" color="0,104,183" opacity="1" zindex="-1" count="100" 
+            src="https://js-cdn.mocn.top/gh/momo54181/bili/Scripts/line.js"></script>
+    
+    <!-- Live2D 看板娘 -->
+    <div id="live2d-container" style="display:none;">
+        <canvas id="mycanvas" width="300" height="486"></canvas>
+    </div>
+    
+    <!-- 音频元素 -->
+    <audio id="my_audio"></audio>
+    
+    <!-- 脚本 -->
     <script src="https://js-cdn.mocn.top/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://js-cdn.mocn.top/gh/momo54181/bili/bundles/main.vraODx5hYf-DdzL9Ux5Z6Kmv9go-Dd1ofX_oEDjA4wRs.js"></script>
-  </head>
-  
-  <body onload="if (screen.width > 720 && !/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) { InitLive2D() }">
-    <div class="header">
-      <main class="cd-main-content">
-        <div class="container">
-          <div class="wrapper-content article">
-            <div class="ibox">
-              <div class="ibox-content animated fadeIn">
-                <main>
-                  <section class="article-content">
-                    <header class="page-header">
-                      <div class="text-center">
-                        <a>
-                          <h2 class="padding-bot10">BiliMi~</h2></a>
-                      </div>
-                    </header>
-                    <article class="article" id="article">
-                      <p>
-                        <span style="font-size:30px;">Hello World</p>
-                      <div style="position: relative; padding: 30% 45%;">
-                        <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="" frameborder="no" scrolling="no" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts" id="videolink"></iframe>
-                      </div>
-                      <h3>功能介绍</h3>
-                      <p>随机Bili（刷新更换视频）</p>
-                      <p>登陆看高清视频<div title="BiliBili登陆" id="myssl_seal" onclick="window.open('https://space.bilibili.com/551991483','BiliBili','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')" style="text-align: center">点我看莫莫的B站主页 
-                      <p>视频来源于 哔哩哔哩 版权纠纷与本站无关.</p>
-                      <h3>莫莫逗狗 © 版权所有</h3>
-                      <div title="BiliBili登陆" id="myssl_seal" onclick="window.open('https://www.mocn.top','BiliBili','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')" style="text-align: center">莫莫逗狗
-                    </article>
-                  </section>
-                </main>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-    <button type="button" class="btn btn-info btn-sm canvas-close" style="position: fixed; right: 0px; bottom: 0px; z-index: 200;">莫莫逗狗 © 版权所有</button>
-    <script type="text/javascript" color="0,104,183" opacity="1" zindex="-1" count="100" src="https://js-cdn.mocn.top/gh/momo54181/bili/Scripts/line.js"></script>
-    <div class="layui-layer-move" style="cursor: move; display: none;"></div>
-    <audio id="my_audio"></audio>
-    <p>
-    </p>
-    <div>
-      <canvas id="mycanvas" width="300" height="486" style="position:fixed; bottom:0; right:0; z-index:999;"></canvas>
-    </div>
-    <script type="text/javascript">if (screen.width > 720 && !/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
-        document.write('<script type="text/javascript" charset="utf-8" src="https://js-cdn.mocn.top/gh/momo54181/bili/Scripts/live2d.min.js"><\/script>')
-      }</script>
-    <script>var LAppDefine = {
-        // 调试，true时会在console里显示日志        
-        DEBUG_LOG: false,
-        DEBUG_MOUSE_LOG: false,
-        // 鼠标相关日志           
-        //  全部设定            
-        //这里配置canvsa元素的id        
-        CANVAS_ID: "mycanvas",
-        //是否开启滚轮缩放，默认true        
-        IS_SCROLL_SCALE: false,
-        // 画面最大缩放级别        
-        VIEW_MAX_SCALE: 2,
-        // 画面最小缩放级别        
-        VIEW_MIN_SCALE: 0.8,
-        VIEW_LOGICAL_LEFT: -1,
-        VIEW_LOGICAL_RIGHT: 1,
-        VIEW_LOGICAL_MAX_LEFT: -2,
-        VIEW_LOGICAL_MAX_RIGHT: 2,
-        VIEW_LOGICAL_MAX_BOTTOM: -2,
-        VIEW_LOGICAL_MAX_TOP: 2,
-        // 动作优先级常量        
-        PRIORITY_NONE: 0,
-        PRIORITY_IDLE: 1,
-        PRIORITY_NORMAL: 2,
-        PRIORITY_FORCE: 3,
-        //是否绑定切换模型按钮        
-        IS_BIND_BUTTON: false,
-        //绑定按钮元素id        
-        BUTTON_ID: "Change",
-        //是否开启模型切换完成之前禁止按钮点击的选项，默认为true        
-        IS_BAN_BUTTON: true,
-        //设置按钮禁止状态时的class，可自定义样式，前提是IS_BAN_BUTTON为true
-        BAN_BUTTON_CLASS: "inactive",
-        //设置按钮正常状态时的class        
-        NORMAL_BUTTON_CLASS: "active",
-        //衣服切换模式 目前只支持两种 sequence-顺序 random-随机        //需事先配置好json文件里的textures属性        
-        //暂不支持保存功能        
-        TEXURE_CHANGE_MODE: "sequence",
-        IS_START_TEXURE_CHANGE: false,
-        TEXURE_BUTTON_ID: "",
-        MODELS: [["model/sagiri/sagiri.model.json"]],
-        // 与外部定义的json文件匹配        
-        MOTION_GROUP_IDLE: "idle",
-        // 空闲时        
-        MOTION_GROUP_TAP_BODY: "tap_body",
-        // 点击身体时        
-        MOTION_GROUP_FLICK_HEAD: "flick_head",
-        // 抚摸头部        
-        MOTION_GROUP_PINCH_IN: "pinch_in",
-        // 放大时        
-        MOTION_GROUP_PINCH_OUT: "pinch_out",
-        // 缩小时        
-        MOTION_GROUP_SHAKE: "shake",
-        // 摇晃        
-        //如果有自定义的动作分组可以放在这里        
-        // 与外部定义json文件相匹配        
-        HIT_AREA_HEAD: "head",
-        HIT_AREA_BODY: "body",
-        //初始化的模型大小        
-        SCALE: 0.91,
-        //新增属性，是否播放音频 默认为true        
-        IS_PLAY_AUDIO: true,
-        //新增属性，audio标签id值           
-        AUDIO_ID: "my_audio"
-      };</script>
-  </body>
-
+    
+    <!-- 统计分析 -->
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"KDo5KZeU67k4cmSe",ck:"KDo5KZeU67k4cmSe"})</script>
+    
+    <!-- 主脚本 -->
+    <script>
+    // 视频列表
+    const videoList = [
+        "https://player.bilibili.com/player.html?aid=431257393&cid=854328289&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=345780098&cid=840124368&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=350422709&cid=840124368&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=489420444&cid=1225338686&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=693791944&cid=991340657&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=225632737&cid=225632737&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=824040782&cid=1068790439&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=372697798&cid=251735467&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=439320230&cid=439320230&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=354573511&cid=1084324727&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=268926258&cid=1064656363&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=819908404&cid=961504081&page=1&as_wide=1&high_quality=1&danmaku=0&t=1",
+        "https://player.bilibili.com/player.html?aid=956342234&cid=1206054952&page=1&as_wide=1&high_quality=1&danmaku=0&t=1"
+    ];
+    
+    // 页面加载完成后执行
+    document.addEventListener('DOMContentLoaded', function() {
+        // 随机选择视频
+        const randomIndex = Math.floor(Math.random() * videoList.length);
+        document.getElementById("videolink").src = videoList[randomIndex];
+        
+        // 如果是桌面设备且非移动端，初始化Live2D
+        if (screen.width > 720 && !/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+            initLive2D();
+        }
+    });
+    
+    // 初始化Live2D
+    function initLive2D() {
+        document.getElementById('live2d-container').style.display = 'block';
+        
+        // 动态加载Live2D脚本
+        const script = document.createElement('script');
+        script.src = 'https://js-cdn.mocn.top/gh/momo54181/bili/Scripts/live2d.min.js';
+        script.onload = function() {
+            // Live2D配置
+            window.LAppDefine = {
+                DEBUG_LOG: false,
+                DEBUG_MOUSE_LOG: false,
+                CANVAS_ID: "mycanvas",
+                IS_SCROLL_SCALE: false,
+                VIEW_MAX_SCALE: 2,
+                VIEW_MIN_SCALE: 0.8,
+                VIEW_LOGICAL_LEFT: -1,
+                VIEW_LOGICAL_RIGHT: 1,
+                VIEW_LOGICAL_MAX_LEFT: -2,
+                VIEW_LOGICAL_MAX_RIGHT: 2,
+                VIEW_LOGICAL_MAX_BOTTOM: -2,
+                VIEW_LOGICAL_MAX_TOP: 2,
+                PRIORITY_NONE: 0,
+                PRIORITY_IDLE: 1,
+                PRIORITY_NORMAL: 2,
+                PRIORITY_FORCE: 3,
+                IS_BIND_BUTTON: false,
+                BUTTON_ID: "Change",
+                IS_BAN_BUTTON: true,
+                BAN_BUTTON_CLASS: "inactive",
+                NORMAL_BUTTON_CLASS: "active",
+                TEXURE_CHANGE_MODE: "sequence",
+                IS_START_TEXURE_CHANGE: false,
+                TEXURE_BUTTON_ID: "",
+                MODELS: [["model/sagiri/sagiri.model.json"]],
+                MOTION_GROUP_IDLE: "idle",
+                MOTION_GROUP_TAP_BODY: "tap_body",
+                MOTION_GROUP_FLICK_HEAD: "flick_head",
+                MOTION_GROUP_PINCH_IN: "pinch_in",
+                MOTION_GROUP_PINCH_OUT: "pinch_out",
+                MOTION_GROUP_SHAKE: "shake",
+                HIT_AREA_HEAD: "head",
+                HIT_AREA_BODY: "body",
+                SCALE: 0.91,
+                IS_PLAY_AUDIO: true,
+                AUDIO_ID: "my_audio"
+            };
+        };
+        document.head.appendChild(script);
+    }
+    </script>
+    
+    <style>
+    /* 自定义样式 */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 比例 */
+        height: 0;
+        overflow: hidden;
+        margin: 20px 0;
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    
+    .bilibili-link, .website-link {
+        cursor: pointer;
+        color: #00a1d6;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 10px 0;
+        display: inline-block;
+    }
+    
+    .bilibili-link:hover, .website-link:hover {
+        text-decoration: underline;
+    }
+    
+    .copyright-notice {
+        color: #999;
+        font-size: 0.9em;
+        margin: 15px 0;
+    }
+    
+    @media (max-width: 768px) {
+        #live2d-container {
+            display: none !important;
+        }
+        
+        .video-container {
+            padding-bottom: 75%; /* 移动端更适合4:3比例 */
+        }
+    }
+    </style>
+</body>
 </html>
